@@ -1,0 +1,60 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "trankit"
+dynamic = ["version"]
+description = "Trankit: A Light-Weight Transformer-based Toolkit for Multilingual Natural Language Processing"
+readme = "README.md"
+license = "Apache-2.0"
+authors = [
+    { name = "NLP Group at the University of Oregon", email = "thien@cs.uoregon.edu" },
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Text Processing",
+    "Topic :: Text Processing :: Linguistic",
+]
+dependencies = [
+    "adapters>=0.1.1",
+    "filelock",
+    "langid==1.1.6",
+    "numpy>=1.26.4",
+    "packaging>=24.0",
+    "protobuf>=5.26.1",
+    "regex != 2019.12.17",
+    "requests>=2.31.0",
+    "sacremoses>=0.1.1",
+    "sentencepiece>=0.2.0",
+    "six>=1.16.0",
+    "tokenizers>=0.7.0",
+    "torch>=1.6.0,<=2.0.1",
+    "tqdm>=4.27",
+    "transformers>=4.39.3",
+]
+
+[project.urls]
+Homepage = "https://github.com/nlp-uoregon/trankit"
+
+[tool.hatch.version]
+path = "trankit/__init__.py"
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/trankit",
+]
